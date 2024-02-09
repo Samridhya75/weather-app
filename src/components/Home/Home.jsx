@@ -12,7 +12,7 @@ const Home = () => {
     const fetchWeather = async () => {
         try {
             const apiKey = 'dae9f8497d09e2fa8106ce64a0425dfb';
-            const weatherUrl = `http://api.openweathermap.org/data/2.5/weather?q=${city},in&APPID=${apiKey}`;
+            const weatherUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city},in&APPID=${apiKey}`;
             const currentWeatherResponse = await axios.get(weatherUrl);
             setWeather(currentWeatherResponse.data);
 
