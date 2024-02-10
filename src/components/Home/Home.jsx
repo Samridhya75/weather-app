@@ -50,18 +50,22 @@ const Home = () => {
             {weather && (
                 <div className='main-container'>
                     <div className="weatherContainer">
-                        <span className='city'>{weather.name}</span>
+                        <p className='current-title'>Current Weather</p>
+                        <span className='city'>City: {weather.name}</span>
                         <span className='temperature'>{Math.round(weather.main.temp - 273.15)}℃</span>
                         <span className='weather-type'>{weather.weather.main}</span>
                         <img src={`./icons/${weather.weather[0].icon}.png`} alt="icon" className='weather-icon' />
                         <span className='description'>{weather.weather[0].description}</span>
                     </div>
                     <div className="weatherDetails">
+                        <p className='current-title'>Current Weather Details</p>
                         <div className="parameter-row">
-                            <span className='parameter-label'>Max Temp-</span>
-                            <span className='parameter-value'>{Math.round(weather.main.temp_max - 273.15)}℃</span>
-                            <span className='parameter-label'>Min Temp-</span>
-                            <span className='parameter-label'>{Math.round(weather.main.temp_min - 273.15)}℃</span>
+                            <p className='parameter-label'>Max Temp-</p>
+                            <p className='parameter-value'>{Math.round(weather.main.temp_max - 273.15)}℃</p>
+                        </div>
+                        <div className='parameter-row'>    
+                            <p className='parameter-label'>Min Temp-</p>
+                            <p className='parameter-label'>{Math.round(weather.main.temp_min - 273.15)}℃</p>
                         </div>
                         <div className="parameter-row">
                             <span className='parameter-label'>Wind</span>
@@ -82,16 +86,10 @@ const Home = () => {
                     </div>
                 </div>
             )}
-            <div className="details">
-                <div className="icon">
-                    <img src="/weather-icon.png" alt="weather-icon" />
-                    <p>Weather App to find current weather and 3hrs of forecast</p>
-                    <p>Powered by <a href="https://openweathermap.org/">OpenWeatherMap</a></p>
-                    <p>Made by Samridhya Ghosh</p>
-                </div>
-            </div>
+            
             {forecast && (
                 <div className="forecastContainer">
+                    <p className='forecast-title'>Forecast for every 3hrs</p>
                     <div className="weekdays-column">
                         <span className="weekday">Date: {forecast.list[0].dt_txt}</span><br></br>
                         <span className="parameter">Temperature: {Math.round(forecast.list[0].main.temp - 273.15)}℃</span><br></br>
@@ -144,6 +142,14 @@ const Home = () => {
                     </div> */}
                 </div>
             )}
+            <div className="details">
+                <div className="icon">
+                    <img src="/weather-icon.png" alt="weather-icon" />
+                    <p>Weather App to find current weather and 3hrs of forecast</p>
+                    <p>Powered by <a href="https://openweathermap.org/">OpenWeatherMap</a></p>
+                    <p>Made by Samridhya Ghosh</p>
+                </div>
+            </div>
         </>
     )
 }
