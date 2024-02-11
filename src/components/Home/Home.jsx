@@ -125,27 +125,12 @@ const Home = () => {
                         <span className="parameter">Humidity: {forecast.list[4].main.humidity} %</span><br></br>
                         <span className="parameter">Pressure: {forecast.list[4].main.pressure} hPa</span><br></br>
                     </div>
-                    
-                    {/* <div className="weekdays-column">
-                    <span className="weekday">Saturday</span><br></br>
-                    <span className="parameter">Temperature: ℃</span><br></br>
-                    <span className="parameter">Weather:</span><br></br>
-                    <span className="parameter">Humidity: %</span><br></br>
-                    <span className="parameter">Pressure: hPa</span><br></br>
-                    </div>
-                    <div className="weekdays-column">
-                    <span className="weekday">Sunday</span><br></br>
-                    <span className="parameter">Temperature: ℃</span><br></br>
-                    <span className="parameter">Weather:</span><br></br>
-                    <span className="parameter">Humidity: %</span><br></br>
-                    <span className="parameter">Pressure: hPa</span><br></br>
-                    </div> */}
                 </div>
             )}
             <div className="details">
                 <div className="icon">
-                    <img src="/weather-icon.png" alt="weather-icon" />
-                    <p>Weather App to find current weather and 3hrs of forecast</p>
+                    <img src="/weather.svg" alt="weather-icon" />
+                    <p>Weather App to find current weather and forecast every 3hrs</p>
                     <p>Powered by <a href="https://openweathermap.org/">OpenWeatherMap</a></p>
                     <p>Made by Samridhya Ghosh</p>
                 </div>

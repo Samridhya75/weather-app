@@ -1,10 +1,9 @@
-*{
-  background: url('/background3.jpg');
+body{
+  background-image: url('/mobile-background.jpg');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
-  overflow-x: hidden;
 }
 
 
@@ -17,6 +16,7 @@
   display: flex;
   flex-direction: column;
   padding: 10px;
+  margin: 0 auto;
 }
 .inputField{
   background-color: rgba(255, 255, 255, 0.5);
@@ -54,6 +54,7 @@
   flex-direction: column;
   padding: 10px;
   align-items: center;
+  margin: 0 auto;
 }
 .city{
   font-weight: 600;
@@ -92,7 +93,7 @@
   width: 85%;
   overflow: hidden;
   padding: 10px;
-  margin-top: 10px;
+  margin: 10px auto;
 }
 .parameter-row{
   display: flex;
@@ -126,6 +127,7 @@
   overflow: hidden;
   text-align: center;
   padding: 10px;
+  margin: 0 auto;
 }
 .weekdays-column{
   display: flex;
@@ -147,8 +149,14 @@
   font-size: 20px;
   margin-top: 20px;
 }
+
+.details{
+  width: 90%;
+  margin: 0 auto;
+  text-align: center;
+}
 .icon img{
-  width: 85%;
+  width: 50%;
 }
 .icon p{
   letter-spacing: 1px;
@@ -169,4 +177,53 @@
   font-weight: 500;
   font-size: 20px;
   text-align: center;
+}
+
+@media only screen and (min-width: 768px){
+  body{
+    background-image: url('/background3.jpg');
+  }
+  .search-container{
+    width: 100%;
+  }
+  .inputWrapper{
+    width: 90%;
+    margin: 0 auto;
+  }
+  .weatherContainer{
+    margin: 0 auto;
+  }
+  .weatherDetails{
+    margin: 20px auto;
+  }
+  .forecastContainer{
+    margin: 0 auto;
+  }
+  .details{
+    width: 90%;
+  }
+  .icon{
+    margin: 0 auto;
+  }
+}
+
+@media only screen and (min-width: 1024px){
+  .main-container{
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+  }
+  .weatherContainer{
+    width: 30%;
+    flex-direction: column;
+  }
+  .weatherDetails{
+    width: 60%;
+  }
+  .forecastContainer{
+    flex-direction: row;
+  }
+  .icon img{
+    width: 30%;
+  }
 }
